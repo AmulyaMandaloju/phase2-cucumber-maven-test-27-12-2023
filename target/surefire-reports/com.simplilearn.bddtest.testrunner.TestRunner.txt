@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: com.simplilearn.bddtest.testrunner.TestRunner
+-------------------------------------------------------------------------------
+Tests run: 42, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 116.6 s <<< FAILURE! -- in com.simplilearn.bddtest.testrunner.TestRunner
+Amazon Homepage Test.Amazon Homepage title verification -- Time elapsed: 2.750 s <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[]Amazon.in> but was:<[Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - ]Amazon.in>
+	at org.junit.Assert.assertEquals(Assert.java:117)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at com.simplilearn.bddtest.stepdefinitions.AmazonHomepageSteps.verify_meta_title_of_the_page(AmazonHomepageSteps.java:40)
+	at ✽.Verify meta title of the page(file:///D:/Java%20eclipse%20workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/Features/amazon-homepage.feature:11)
+
+Facebook Login Verification #1.Unsuccessful Verification of Login functionality -- Time elapsed: 0.080 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.get(String)" because "this.driver" is null
+	at com.simplilearn.bddtest.stepdefinitions.FacebookLoginSteps.i_should_be_on_the_facebook_login_page(FacebookLoginSteps.java:39)
+	at ✽.I should be on the facebook login page(file:///D:/Java%20eclipse%20workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/Features/facebook-login.feature:7)
+
