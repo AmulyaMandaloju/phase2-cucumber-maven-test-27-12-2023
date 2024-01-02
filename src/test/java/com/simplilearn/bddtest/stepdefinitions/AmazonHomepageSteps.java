@@ -59,7 +59,7 @@ public class AmazonHomepageSteps {
 
 	@Then("Verify meta title of the curent page")
 	public void verify_meta_title_of_the_curent_page() {
-		String expectedTitle = "[]Amazon.in";
+		String expectedTitle = "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
 		String actualTitle = driver.getTitle();
 		assertNotEquals(actualTitle, expectedTitle);
 	}
