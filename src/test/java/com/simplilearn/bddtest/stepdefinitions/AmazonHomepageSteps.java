@@ -52,13 +52,13 @@ public class AmazonHomepageSteps {
 		assertEquals(actualTitle, expectedTitle);
 	}
 	
-	@When("Navigate user on dirrent link")
-	public void navigate_user_on_dirrent_link() {
+	@When("Navigate user on diffrent link")
+	public void navigate_user_on_diffrent_link() {
 		 driver.findElement(By.xpath("//*[@id=\"nav-xshop\"]/a[4]")).click();
 	}
 
-	@Then("Verify meta title of the curent page")
-	public void verify_meta_title_of_the_curent_page() {
+	@Then("Verify meta title of the current page")
+	public void verify_meta_title_of_the_current_page() {
 		String expectedTitle = "Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in";
 		String actualTitle = driver.getTitle();
 		assertNotEquals(actualTitle, expectedTitle);
