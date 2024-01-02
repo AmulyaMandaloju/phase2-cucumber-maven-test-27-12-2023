@@ -16,7 +16,7 @@ import io.cucumber.java.en.Then;
 
 public class FacebookLoginSteps {
 
-	String driverPath ="D:\\Java eclipse workspace\\phase2-cucumber-maven-test-27-12-2023\\src\\test\\resources\\drivers\\windows\\chromedriver.exe";
+	String driverPath ="D:\\\\Java eclipse workspace\\\\phase2-cucumber-maven-test-27-12-2023\\\\src\\\\test\\\\resources\\\\drivers\\\\windows\\\\chromedriver.exe";
 	String siteUrl = "https://www.facebook.com/";
 	WebDriver driver;
 	
@@ -49,12 +49,12 @@ public class FacebookLoginSteps {
 		driver.findElement(By.id("pass")).sendKeys(password);
 	}
 
-	@Given("I clicked on login button")
+	@Given("^I clicked on login button$")
 	public void i_clicked_on_login_button() {
 		driver.findElement(By.name("login")).click();
 	}
 
-	@Then("I returns back on the facebook login page")
+	@Then("^I returns back on the facebook login page$")
 	public void i_returns_back_on_the_facebook_login_page() throws InterruptedException {
 		Thread.sleep(3000);
 		WebElement errorEm = driver.findElement(By.cssSelector("#loginform > div:nth-child(12) > div._9ay7"));
