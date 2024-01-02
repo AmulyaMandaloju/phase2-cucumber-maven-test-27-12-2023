@@ -17,7 +17,7 @@ import io.cucumber.java.en.When;
 
 public class ResetLoginFormSteps {
 
-	String driverPath = "D:/Java eclipse workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/drivers/windows/chromedriver.exe";
+	String driverPath = "D:\\Java eclipse workspace\\phase2-cucumber-maven-test-27-12-2023\\src\\test\\resources\\drivers\\windows\\chromedriver.exe";
 	String siteUrl = "D:\\Java eclipse workspace\\phase2-cucumber-maven-test-27-12-2023\\src\\main\\resources\\static\\login.html";
 	WebDriver driver;
 

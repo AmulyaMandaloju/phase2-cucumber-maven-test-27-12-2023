@@ -4,7 +4,7 @@ Feature: Search products on Amazon
   User wants test search of multiple products on amazon
 
   @Search
-  Scenario: Verification of search feature button with numbers of products
+  Scenario Outline: Verification of search feature button with numbers of products
     Given Open the Chrome and launch amazon application
     # And Maximize the Chrome browser window
     When Enter the Product search

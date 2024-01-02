@@ -4,7 +4,7 @@ Feature: Reset Login Form
   User wants test reset login form for muliple inputs
 
   @ResetLogin
-  Scenario: Verification of reset button with numbers of credential
+  Scenario Outline: Verification of reset button with numbers of credential
     Given Open the Chrome and launch the application
     And Maximize the Chrome browser window
     When Enter the Username and Password

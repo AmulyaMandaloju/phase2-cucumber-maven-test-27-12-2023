@@ -16,7 +16,7 @@ import io.cucumber.java.en.Then;
 
 public class FacebookLoginSteps {
 
-	String driverPath ="D:/Java eclipse workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/drivers/windows/chromedriver.exe";
+	String driverPath ="D:\\Java eclipse workspace\\phase2-cucumber-maven-test-27-12-2023\\src\\test\\resources\\drivers\\windows\\chromedriver.exe";
 	String siteUrl = "https://www.facebook.com/";
 	WebDriver driver;
 	
