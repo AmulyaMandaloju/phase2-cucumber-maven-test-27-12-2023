@@ -16,7 +16,7 @@ import io.cucumber.java.en.Then;
 
 public class FacebookLoginSteps {
 
-	String driverPath ="D:\\\\Java eclipse workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/drivers/windows/chromedriver.exe";
+	String driverPath ="D:/Java eclipse workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/drivers/windows/chromedriver.exe";
 	String siteUrl = "https://www.facebook.com/";
 	WebDriver driver;
 	
@@ -34,7 +34,7 @@ public class FacebookLoginSteps {
 			driver.quit();
 	}
 	
-	@Given("I should be on the facebook login page")
+	@Given("^I should be on the facebook login page$")
 	public void i_should_be_on_the_facebook_login_page() {
 	   driver.get(siteUrl+"login");
 	}

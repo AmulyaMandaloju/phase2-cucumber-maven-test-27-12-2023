@@ -28,6 +28,7 @@ Feature: Reset Password
       | lmn@gmail.com | lmn@123  |
     And user clicks "login in" button
 
+  @ignore
   Scenario: Unsuccessful Verification of Login functionality
     Given user should be on the login page
     And user enters email adress

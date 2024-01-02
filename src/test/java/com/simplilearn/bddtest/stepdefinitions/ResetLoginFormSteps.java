@@ -9,20 +9,32 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class ResetLoginFormSteps {
 
-	String driverPath = "D:\\\\Java eclipse workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/drivers/windows/chromedriver.exe";
-	String siteUrl = "D:\\\\Java eclipse workspace/phase2-cucumber-maven-test-27-12-2023/src/main/resources/static/login.html";
+	String driverPath = "D:/Java eclipse workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/drivers/windows/chromedriver.exe";
+	String siteUrl = "D:\\Java eclipse workspace\\phase2-cucumber-maven-test-27-12-2023\\src\\main\\resources\\static\\login.html";
 	WebDriver driver;
 
+	@Before(value = "@ResetLogin")
+	public void setUp() {
+		System.setProperty("webdriver.chrome.driver", driverPath);
+	    driver = new ChromeDriver();
+	}
+	
+	@After(value = "@ResetLogin")
+	public void cleanUp() {
+		if(driver!=null)
+			driver.quit();
+	}
+	
 	@Given("^Open the Chrome and launch the application$")
 	public void open_the_chrome_and_launch_the_application() throws InterruptedException {
-		System.setProperty("webdriver.chrome.driver", driverPath);
-		driver = new ChromeDriver();
 		driver.get(siteUrl);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 		Thread.sleep(3000);

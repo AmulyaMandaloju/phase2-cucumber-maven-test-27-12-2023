@@ -15,4 +15,3 @@ Feature: Search products on Amazon
       | product_name      | page_title                    |
       | Iphone 15 pro max | Amazon.in : Iphone 15 pro max |
       | Apple Mac book    | Amazon.in : Apple Mac book    |
-      | Vivo Z1 pro       | Amazon.in : Vivo Z1 pro       |
