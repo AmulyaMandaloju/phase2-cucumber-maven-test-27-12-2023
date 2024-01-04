@@ -37,7 +37,7 @@ public class AmazonHomepageSteps {
 	@Given("Open the Chrome and Launch the amazon application")
 	public void open_the_chrome_and_launch_the_amazon_application() {
 	    driver.get(siteUrl);
-	    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+	    //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
 	}
 
 	@When("User on amazon homepage")

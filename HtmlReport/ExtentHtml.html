@@ -40,6 +40,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 			<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -49,7 +50,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Jan 2, 2024 05:03:06 pm</span>
+			<span class='label blue darken-3 suite-start-time'>Jan 4, 2024 11:03:52 am</span>
 			</a>
 		</ul>
 	</div>
@@ -64,7 +65,7 @@
 				<i class='material-icons'>warning</i> Status
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
-										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+										<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -76,8 +77,8 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@SmokeTest</a></li>
 					<li><a href='#'>@AmazonSearchTest</a></li>
+					<li><a href='#'>@SmokeTest</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -119,12 +120,12 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='$100%'>
-                    <span class='strong'>1</span> features passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='$0%'>
+                    <span class='strong'>0</span> features passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> features failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    1</span> features failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped
                 </div>
@@ -137,12 +138,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>2</span> scenarios passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'>
+                    <span class='strong'>0</span> scenarios passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> scenarios failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>
+                    2</span> scenarios failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
@@ -157,14 +158,14 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'>
-                    <span class='strong'>8</span> steps passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='37%'>
+                    <span class='strong'>3</span> steps passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> steps failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
-                    0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='25%'>
+                    2</span> steps failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='37%'>
+                    3</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>
                     0</span> others
                 </div>
@@ -185,11 +186,11 @@
 	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Search products on Amazon</span>
-						<span class='test-time'>Jan 2, 2024 05:03:07 pm</span>
-						<span class='test-status right pass'>Pass</span>
+						<span class='test-time'>Jan 4, 2024 11:03:54 am</span>
+						<span class='test-status right fail'>Fail</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -200,19 +201,19 @@
 </div>
 	<div class='test-desc'>  User wants test search of multiple products on amazon</div>
 
-<div class='scenario outline node' test-id='2' status='pass'>
+<div class='scenario outline node' test-id='2' status='fail'>
 
-	<span class='duration right label'>00 00 28.249</span>
+	<span class='duration right label'>00 00 15.999</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Search feature Test with multiple of products</div>
+		<div class="scenario-name"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span> Scenario Outline: Search feature Test with multiple of products</div>
 	</div>
 	
 		<div class='node-desc'><br><br><table class='markup-table table '><tr><td>product_name</td><td>page_title</td></tr><tr><td>Iphone 15 pro max</td><td>Amazon.in : Iphone 15 pro max</td></tr><tr><td>Apple Mac book</td><td>Amazon.in : Apple Mac book</td></tr></table></div>
 	
 	
 	<ul class='steps'>
-		<li test-id='3' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Search feature Test with multiple of products</div>
+		<li test-id='3' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Search feature Test with multiple of products</div>
 
 				<div class='category-list'>
 						<span class='category label'>@SmokeTest</span>
@@ -220,26 +221,54 @@
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='5' class='gc given Pass' status='Pass'>
+				<li test-id='7' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.launch_amazon_application_on_chrome()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Launch amazon application on chrome</h6>
 
 				</li>
-				<li test-id='6' class='gc when Pass' status='Pass'>
+				<li test-id='10' class='gc when Pass' status='Pass'>
 					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.enter_product_search_input(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter Product Search input "Iphone 15 pro max"</h6>
 
 				</li>
-				<li test-id='7' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.submit_product_search()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Submit Product Search</h6>
+				<li test-id='13' class='gc then Fail' status='Fail'>
+					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.submit_product_search()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Then Submit Product Search</h6>
 
+							<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.131)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [208c03fd508e45bfd2a80bcab812dad3, submitElement {id=668C56A38B690C216B61880E0E6DEC57_element_23}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.131, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57637}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57637/devtoo..., se:cdpVersion: 120.0.6099.131, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (208c03fd508e45bfd2a80bcab812dad3)] -> id: twotabsearchtextbox]
+Session ID: 208c03fd508e45bfd2a80bcab812dad3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.submit(RemoteWebElement.java:83)
+	at com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.submit_product_search(AmazonProductSearch2Steps.java:56)
+	at ✽.Submit Product Search(file:///D:/Java%20eclipse%20workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/Features/amazon-product-search2.feature:11)
+</textarea>
 				</li>
-				<li test-id='8' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.verify_page_title(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Verify page title "Amazon.in : Iphone 15 pro max"</h6>
+				<li test-id='16' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.verify_page_title(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Verify page title "Amazon.in : Iphone 15 pro max"</h6>
 
+							<div class="node-step">Step skipped</div>
 				</li>
 			</ul>
 		</li>
-		<li test-id='10' class='node scenario Pass' status='Pass'>
-			<div class="step-name" title="()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Search feature Test with multiple of products</div>
+		<li test-id='20' class='node scenario Fail' status='Fail'>
+			<div class="step-name" title="()"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>Search feature Test with multiple of products</div>
 
 				<div class='category-list'>
 						<span class='category label'>@SmokeTest</span>
@@ -247,21 +276,50 @@
 				</div>
 
 			<ul class='gc steps'>
-				<li test-id='12' class='gc given Pass' status='Pass'>
+				<li test-id='24' class='gc given Pass' status='Pass'>
 					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.launch_amazon_application_on_chrome()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Given Launch amazon application on chrome</h6>
 
 				</li>
-				<li test-id='13' class='gc when Pass' status='Pass'>
-					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.enter_product_search_input(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>When Enter Product Search input "Apple Mac book"</h6>
+				<li test-id='27' class='gc when Fail' status='Fail'>
+					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.enter_product_search_input(java.lang.String)"><span class='status fail' title='Fail'><i class='material-icons'>cancel</i></span>When Enter Product Search input "Apple Mac book"</h6>
 
+							<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=120.0.6099.131)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0215de8acbaf327ab08bb30ca51d825f, sendKeysToElement {id=EB1E7E9AF55216D4A771C04680B06F65_element_22, value=[Ljava.lang.CharSequence;@3baf6936}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.131, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57673}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57673/devtoo..., se:cdpVersion: 120.0.6099.131, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0215de8acbaf327ab08bb30ca51d825f)] -> id: twotabsearchtextbox]
+Session ID: 0215de8acbaf327ab08bb30ca51d825f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.enter_product_search_input(AmazonProductSearch2Steps.java:50)
+	at ✽.Enter Product Search input "Apple Mac book"(file:///D:/Java%20eclipse%20workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/Features/amazon-product-search2.feature:10)
+</textarea>
 				</li>
-				<li test-id='14' class='gc then Pass' status='Pass'>
-					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.submit_product_search()"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>Then Submit Product Search</h6>
+				<li test-id='30' class='gc then Skip' status='Skip'>
+					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.submit_product_search()"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>Then Submit Product Search</h6>
 
+							<div class="node-step">Step skipped</div>
 				</li>
-				<li test-id='15' class='gc and Pass' status='Pass'>
-					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.verify_page_title(java.lang.String)"><span class='status pass' title='Pass'><i class='material-icons'>check_circle</i></span>And Verify page title "Amazon.in : Apple Mac book"</h6>
+				<li test-id='33' class='gc and Skip' status='Skip'>
+					<h6 class="step-name" title="com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.verify_page_title(java.lang.String)"><span class='status skip' title='Skip'><i class='material-icons'>redo</i></span>And Verify page title "Amazon.in : Apple Mac book"</h6>
 
+							<div class="node-step">Step skipped</div>
 				</li>
 			</ul>
 		</li>
@@ -311,15 +369,15 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@SmokeTest</span>
+						<span class='category-name'>@AmazonSearchTest</span>
 						<span class='category-status right'>
-						<span class='label pass'>2</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -333,14 +391,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 2, 2024 05:03:07 pm</td>
+										<td>Jan 4, 2024 11:03:54 am</td>
 										<td class='linked' test-id='3'>Search feature Test with multiple of products</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 2, 2024 05:03:20 pm</td>
-										<td class='linked' test-id='10'>Search feature Test with multiple of products</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Jan 4, 2024 11:04:04 am</td>
+										<td class='linked' test-id='20'>Search feature Test with multiple of products</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -349,15 +407,15 @@
 				</li>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@AmazonSearchTest</span>
+						<span class='category-name'>@SmokeTest</span>
 						<span class='category-status right'>
-						<span class='label pass'>2</span>
+						<span class='label fail'>2</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 2</span>
 							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 2</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -371,14 +429,14 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Jan 2, 2024 05:03:07 pm</td>
+										<td>Jan 4, 2024 11:03:54 am</td>
 										<td class='linked' test-id='3'>Search feature Test with multiple of products</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 									<tr>
-										<td>Jan 2, 2024 05:03:20 pm</td>
-										<td class='linked' test-id='10'>Search feature Test with multiple of products</td>
-										<td><span class='test-status Pass'>Pass</span></td>
+										<td>Jan 4, 2024 11:04:04 am</td>
+										<td class='linked' test-id='20'>Search feature Test with multiple of products</td>
+										<td><span class='test-status Fail'>Fail</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -394,7 +452,142 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.NoSuchWindowException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 4, 2024 11:04:04 am</td>
+										<td class='linked' test-id='13'>Then Submit Product Search</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=120.0.6099.131)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [208c03fd508e45bfd2a80bcab812dad3, submitElement {id=668C56A38B690C216B61880E0E6DEC57_element_23}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.131, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57637}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57637/devtoo..., se:cdpVersion: 120.0.6099.131, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (208c03fd508e45bfd2a80bcab812dad3)] -> id: twotabsearchtextbox]
+Session ID: 208c03fd508e45bfd2a80bcab812dad3
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.submit(RemoteWebElement.java:83)
+	at com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.submit_product_search(AmazonProductSearch2Steps.java:56)
+	at ✽.Submit Product Search(file:///D:/Java%20eclipse%20workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/Features/amazon-product-search2.feature:11)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>org.openqa.selenium.WebDriverException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>StackTrace</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Jan 4, 2024 11:04:07 am</td>
+										<td class='linked' test-id='27'>When Enter Product Search input "Apple Mac book"</td>
+										<td>
+											<textarea disabled class="code-block">org.openqa.selenium.WebDriverException: target frame detached
+  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
+  (Session info: chrome=120.0.6099.131)
+Build info: version: '4.15.0', revision: '1d14b5521b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [0215de8acbaf327ab08bb30ca51d825f, sendKeysToElement {id=EB1E7E9AF55216D4A771C04680B06F65_element_22, value=[Ljava.lang.CharSequence;@3baf6936}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.131, chrome: {chromedriverVersion: 120.0.6099.109 (3419140ab66..., userDataDir: C:\Users\Dell\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57673}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57673/devtoo..., se:cdpVersion: 120.0.6099.131, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (0215de8acbaf327ab08bb30ca51d825f)] -> id: twotabsearchtextbox]
+Session ID: 0215de8acbaf327ab08bb30ca51d825f
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:607)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:111)
+	at com.simplilearn.bddtest.stepdefinitions.AmazonProductSearch2Steps.enter_product_search_input(AmazonProductSearch2Steps.java:50)
+	at ✽.Enter Product Search input "Apple Mac book"(file:///D:/Java%20eclipse%20workspace/phase2-cucumber-maven-test-27-12-2023/src/test/resources/Features/amazon-product-search2.feature:10)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -420,19 +613,19 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Jan 2, 2024 05:03:06 pm</div>
+					<div class='panel-lead'>Jan 4, 2024 11:03:52 am</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Jan 2, 2024 05:03:35 pm</div>
+			 		<div class='panel-lead'>Jan 4, 2024 11:04:10 am</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>00 00 29.116</div>
+					<div class='panel-lead'>00 00 17.524</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -468,21 +661,21 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@SmokeTest</td>
+							<td>@AmazonSearchTest</td>
+							<td>0</td>
 							<td>2</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 						<tr>
-							<td>@AmazonSearchTest</td>
+							<td>@SmokeTest</td>
+							<td>0</td>
 							<td>2</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									100%
+									0%
 							</td>
 						</tr>
 					</table>
@@ -497,34 +690,34 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
-				failParent: 0,
+				passParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				childCount: 2,
-				passChild: 2,
-				failChild: 0,
+				passChild: 0,
+				failChild: 2,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				grandChildCount: 8,
-				passGrandChild: 8,
-				failGrandChild: 0,
+				passGrandChild: 3,
+				failGrandChild: 2,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 3,
 				infoGrandChild: 0,
 			};
 			</script>
 		
 		<script>
 			var timeline = {
-			        "Search products on Amazon":28.255
+			        "Search products on Amazon":16.014
 			};
 		</script>
 		
